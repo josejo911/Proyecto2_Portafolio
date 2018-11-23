@@ -18,27 +18,24 @@ var _createClass = function() {
 
 function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
-        throw new TypeError("Cannot call a class as a function");
+        throw new TypeError("No se puede llamar a la funciond e la clase");
     }
 }
 
 function _possibleConstructorReturn(self, call) {
     if (!self) {
-        throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        throw new ReferenceError("No se ha inicializado - super() no ha sido llamada");
     }
     return call && (typeof call === "object" || typeof call === "function") ? call : self;
 }
 
 function _inherits(subClass, superClass) {
     if (typeof superClass !== "function" && superClass !== null) {
-        throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+        throw new TypeError("Expresion super deberia ser null o una funcion, no " + typeof superClass);
     }
     subClass.prototype = Object.create(superClass && superClass.prototype, {
         constructor: {
-            value: subClass,
-            enumerable: false,
-            writable: true,
-            configurable: true
+            value: subClass, enumerable: false, writable: true, configurable: true
         }
     });
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
@@ -64,31 +61,31 @@ var data = [{
 {
   'name': 'Laboratorio #5',
   'img': 'https://i.imgur.com/6R5A6du.png',
-  'link': 'https://codepen.io/Kevin_barfleur/pen/WjgVqz',
+  'link': 'https://github.com/josejo911/Lab5-NodeJs',
   'techno': 'Uso de nodejs para utilizar websockets y asi generar un chat consumiendo los datos del server.' },
 
 {
   'name': 'Laboratorio #7',
   'img': 'https://i.imgur.com/0C3t330.png',
-  'link': 'https://codepen.io/Kevin_barfleur/pen/PmNNpO',
+  'link': 'https://github.com/josejo911/Laberinto-Web',
   'techno': 'Generador de laberintos hecho en ReactJS' },
 
 {
   'name': 'Laboratorio #8',
   'img': 'https://i.imgur.com/xMRiBJs.png',
-  'link': 'https://codepen.io/Kevin_barfleur/pen/bqRbpo',
+  'link': 'https://github.com/josejo911/Lab8-Calculadora',
   'techno': 'HTML5 / CSS3 / JavaScript / React -- Calculadora Simple' },
 
 {
   'name': 'Proyecto #1 ',
   'img': 'https://unsplash.it/500/400?image=998',
-  'link': 'hhttps://codepen.io/Kevin_barfleur/pen/ygWyNL',
+  'link': 'https://github.com/josejo911/P1-React-Boilerplate',
   'techno': 'Generacion de un BoilerPlate para React, utilizando todos los conocimientos de stack para JavaScript.' },
 
 {
   'name': 'Proyecto #2 ',
   'img': 'https://unsplash.it/500/400?image=983',
-  'link': 'https://codepen.io/Kevin_barfleur/pen/KmXgwW',
+  'link': 'https://github.com/josejo911/Proyecto2_Portafolio',
   'techno': 'Portafolio que muestra todos los laboratorios vistos en la clase de Sistemas y Tecnologias Web' }];var
 
 
@@ -96,17 +93,12 @@ var data = [{
 Index = function (_React$Component) {_inherits(Index, _React$Component);function Index() {_classCallCheck(this, Index);return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));}_createClass(Index, [{ key: 'render', value: function render()
     {
       return (
-        React.createElement('div', null,
-          React.createElement(Header, null),
-          React.createElement(App, null),
-          React.createElement(Footer, null)));
+        React.createElement('div', null, React.createElement(Header, null), React.createElement(App, null), React.createElement(Footer, null)));
 
 
-    } }]);return Index;}(React.Component);var
-
-
-
-App = function (_React$Component2) {_inherits(App, _React$Component2);
+    } }]);return Index;}(React.Component);
+    
+    var App = function (_React$Component2) {_inherits(App, _React$Component2);
   function App() {_classCallCheck(this, App);var _this2 = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
 
@@ -130,11 +122,7 @@ App = function (_React$Component2) {_inherits(App, _React$Component2);
 
     {
       var cards = this.state.works.map(function (card, index) {return React.createElement('div', { className: 'card' }, React.createElement(Works, {
-            cardName: card.name,
-            cardImg: card.img,
-            cardTechno: card.techno,
-            cardLink: card.link,
-            key: index }));});
+            cardName: card.name, cardImg: card.img,  cardTechno: card.techno, cardLink: card.link,  key: index }));});
 
       return (
         React.createElement('div', null,
@@ -156,7 +144,8 @@ Header = function (_React$Component3) {_inherits(Header, _React$Component3);
 
     _this4.state = {
       text: "Hola, mi nombre es Javier. Este es mi portafolio para 1Sistemas y Tecnologias Web2.",
-      print: '' };return _this4;
+      print: '' };
+      return _this4;
 
   }_createClass(Header, [{ key: 'componentWillMount', value: function componentWillMount()
 
@@ -237,7 +226,9 @@ Works = function (_React$Component5) {_inherits(Works, _React$Component5);functi
 
 
 
-    } }]);return Works;}(React.Component);
+    } }]);
+    return Works;
+  }(React.Component);
 
 
 ReactDOM.render(
